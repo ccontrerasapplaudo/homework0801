@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {"src/test/java/com/applaudostudios/homework0801/features"},
-        glue = {"com.applaudostudios.homework0801.stepdefinitions"}
+        glue = {"com.applaudostudios.homework0801.stepdefinitions","com.applaudostudios.homework0801.hook"},
+        plugin = {"pretty", "html:target/cucumber"}
 )
-public class Run extends AbstractTestNGCucumberTests {
+public class Runner extends AbstractTestNGCucumberTests {
 }
